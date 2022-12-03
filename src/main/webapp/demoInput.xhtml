@@ -11,12 +11,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
+        <div class="card" align="center">
+            
+                <p:lightBox styleClass="imagebox" id="lighbox1">
+                    <h:outputLink value="resources/images/Fanta_personal.jpg" title="FANTA PERSONAL">
+                        <p:graphicImage name="images/Fanta_personal.jpg" id="FANTA_PERSONAL" styleClass="p-shadow-4"
+                            style="height: 20rem; width: 20rem"/>
+                    </h:outputLink>
+                   
+                    <h:outputLink value="resources/images/Agua_Sanluis.jpg" title="AGUA SAN LUIS SIN GAS PERSONAL">
+                        <p:graphicImage name="images/Agua_Sanluis.jpg" id="Agua_Sanluis" styleClass="p-shadow-4"
+                            style="height: 20rem; width: 20rem"/>
+                    </h:outputLink>
+                    
+                    <h:outputLink value="resources/images/pizza_roolfulmet.jpg" title="PIZZA ROLL FULL MEAT">
+                        <p:graphicImage name="images/pizza_roolfulmet.jpg" id="PIZZAROLL" styleClass="p-shadow-4"
+                            style="height: 20rem; width: 20rem"/>
+                    </h:outputLink>
+
+                    <h:outputLink value="resources/images/panalajo.jpg" title="PAN AL AJO (2 UN)">
+                        <p:graphicImage name="images/panalajo.jpg" id="PANAL" styleClass="p-shadow-4"
+                            style="height: 20rem; width: 20rem"/>
+                    </h:outputLink>
+                    
+                     <h:outputLink value="resources/images/LA_FIJA.jpg" title="LA FIJA">
+                        <p:graphicImage name="images/LA_FIJA.jpg" id="LAFIJA" styleClass="p-shadow-4"
+                            style="height: 20rem; width: 20rem"/>
+                    </h:outputLink>
+                   
+                    <h:outputLink value="resources/images/duo-lasagna-bolognesa-desktop-thumbnail.jpg" title="LA FIJA">
+                        <p:graphicImage name="images/duo-lasagna-bolognesa-desktop-thumbnail.jpg" id="duo-lasagna-bolognesa-desktop-thumbnail" styleClass="p-shadow-4"
+                            style="height: 20rem; width: 20rem"/>
+                    </h:outputLink>
+                </p:lightBox>
+
+            
+               
+            </div>
+        
+        
+       
+        
+        
+        <div class="card">
+        <h:form id="form" >
+            <h5>Basic</h5>
+        <p:commandButton id="basic" value="Show" type="button"/>
+        <p:overlayPanel for="basic">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </p:overlayPanel>
+       
+        </h:form >
+        </div>
         <h:form id="frmregistrar" >
 
-
-
+        
             <p:panelGrid columns="2">
 
+                
+                
                 <p:outputLabel value="Nombre del Producto" for="idproducto"  />
                 <p:inputText id="idproducto" value="#{producto.pro.nompro}" required="true"  requiredMessage="Debes ingresar el nombre del producto">
                 </p:inputText>

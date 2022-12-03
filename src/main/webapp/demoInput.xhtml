@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <head>
+        <title>DemoComponentes</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <h:form id="frmregistrar" >
+
+
+
+            <p:panelGrid columns="2">
+
+                <p:outputLabel value="Nombre del Producto" for="idproducto"  />
+                <p:inputText id="idproducto" value="#{producto.pro.nompro}" required="true"  requiredMessage="Debes ingresar el nombre del producto">
+                </p:inputText>
+
+
+                <p:outputLabel value=" tipo del Producto" for="idtippro"  />
+                <p:selectOneMenu id="idtippro" value="#{producto.pro.tippro}">
+                    <f:selectItem noSelectionOption="" itemLabel="Select One" itemValue="#{NULL}"/>
+                    <f:selectItem itemLabel="ACCESORIOS" itemValue="ACCESORIOS"/>
+                    <f:selectItem itemLabel="PERFUMES" itemValue="PERFUMES"/>
+                    <f:selectItem itemLabel="REGALOS" itemValue="REGALOS"/>
+                </p:selectOneMenu>
+                
+
+                <p:outputLabel value="Precio s/" for="idprecio" />
+                <p:inputText  id="idprecio" value="#{producto.pro.prepro}" >
+
+                </p:inputText> 
+
+
+
+
+
+                <p:outputLabel value="Descripcion" for="iddes"/>
+                <p:inputText id="iddes" value="#{producto.pro.despro}" required="true" requiredMessage="Debes ingresar la descripcion del producto">
+
+                </p:inputText>
+
+
+
+
+
+                <p:outputLabel value="STOCK" for="idstock"/>
+                <p:inputText id="idstock" value="#{producto.pro.stockpro}" >
+
+                </p:inputText>
+
+
+
+
+                <p:outputLabel value="Proveedor" for="idprov"/>
+                <p:inputText id="idprov" value="#{producto.pro.idprov}" required="true" requiredMessage="Debes ingresar el proveedor del producto">
+                </p:inputText>
+
+
+
+
+            </p:panelGrid>
+
+            <p:commandButton id="btnRegistrar" value="Registrar" actionListener="#{producto.registrar()}"
+                             update="frmregistrar" style="margin: 25px;  background-color: #2ADB9D; border-color:#2ADB9D">
+
+            </p:commandButton>  
+
+
+
+
+
+        </h:form>
+
+
+
+
+
+
+    </body>
+</html>
+
